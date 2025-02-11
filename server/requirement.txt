@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+python-dotenv
+openai
+git+https://github.com/openai/whisper.git
+ffmpeg
+requests

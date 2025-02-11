@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "## Overview This is a simple FastAPI application that provides a basic API endpoint.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "uvicorn main:app --host 0.0.0.0 --port 7000 --reload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

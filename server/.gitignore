@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.venv/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+
+# FastAPI & Uvicorn logs
+*.log
+logs/
+
+# VS Code
+.vscode/
+
+# Alembic migrations cache
+alembic/versions/*.pyc
+alembic/versions/*.pyo
+alembic/versions/__pycache__/
+
+# Database & SQLite (if used locally)
+*.db
+*.sqlite3
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Docker
+docker-compose.override.yml
+docker-compose.yml
+Dockerfile
+*.dockerfile
+.dockerignore
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
+*.iml
+
+# Logs & Temp files
+tmp/
+*.swp
