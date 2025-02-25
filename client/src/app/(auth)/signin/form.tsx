@@ -34,16 +34,16 @@ export function LoginForm() {
         password,
       });
 
-      // if (result?.error) {
-      //   setError("Invalid email or password");
-      //   toast({
-      //     title: "Login Failed",
-      //     description: "There was an error login. Please try again.",
-      //     variant: "destructive",
-      //   });
-      // } else {
+      if (result?.error) {
+        setError("Invalid email or password");
+        toast({
+          title: "Login Failed",
+          description: "There was an error login. Please try again.",
+          variant: "destructive",
+        });
+      } else {
         router.push("/dashboard"); // Redirect to dashboard on successful login
-      // }
+      }
     } catch (error) {
       setError("An error occurred. Please try again.");
       toast({

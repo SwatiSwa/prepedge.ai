@@ -1,0 +1,35 @@
+POST http://localhost:3000/api/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Swati Gupta",
+    "email": "swati.gu11@gmail.com",
+    "password": "12345678"
+}
+
+### Get all Mock Tests
+
+POST http://localhost:3000/api/mock-tests HTTP/1.1
+content-type: application/json
+
+{
+   "page": 1,
+   "limit": 10,
+   "searchCriterias": [
+
+   ],
+    "sortCriterias": [{
+        "columnName": "createdAt",
+        "columnOrder": "desc"
+    }]
+}
+
+### Create a Mock Test
+
+POST http://localhost:3000/api/mock-tests/create HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Test 1",
+}
+

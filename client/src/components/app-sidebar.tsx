@@ -39,13 +39,18 @@ const data = {
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Assessments",
-      url: "/assessments",
+      title: 'Questions',
+      url: '/questions',
       icon: SquareTerminal,
     },
     {
-      title: "Attempts",
-      url: "/attempts",
+      title: "Mock Tests",
+      url: "/mock-tests",
+      icon: SquareTerminal,
+    },
+    {
+      title: "Mock Test Attempts",
+      url: "/mock-test-attempts",
       icon: SquareTerminal,
     }
   ],
