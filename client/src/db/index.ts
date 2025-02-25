@@ -1,13 +1,12 @@
-import { neon, neonConfig } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/postgres-js';
+import { VercelPool } from '@vercel/postgres';
+import { drizzle } from 'drizzle-orm/vercel-postgres';
 import * as schema from "@/db/schema";
 import env from "@/lib/env";
 
-// Optimize fetch requests for Neon
-neonConfig.fetchConnectionCache = true;
+const pool = new VercelPool({
+    connectionString: env.POSTGRES_URL,
+});
 
-const sql = neon(env.POSTGRES_URL);
-
-export const db = drizzle(sql, { schema });
+export const db = drizzle(pool, { schema });
 
 export type DB = typeof db;

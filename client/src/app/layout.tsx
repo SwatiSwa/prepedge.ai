@@ -16,8 +16,8 @@ import { Toaster } from "@/components/ui/toaster";
 // });
 
 export const metadata: Metadata = {
-  title: "My Nest | Manage your apartment with ease",
-  description: "Manage your apartment with ease.",
+  title: "PrepEdge.ai | Mock Interview Platform",
+  description: "Manage your mock interviews, questions, and more",
 };
 
 export default function RootLayout({
