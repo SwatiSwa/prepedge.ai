@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 import { MoreHorizontal, Plus } from "lucide-react"
 
@@ -13,7 +12,6 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
 import { IndiGrid } from "@/components/indi-grid"
-import { AddQuestionModal } from "@/components/add-question-modal"
 
 export const columns: ColumnDef<any>[] = [
   {
@@ -85,27 +83,10 @@ export const columns: ColumnDef<any>[] = [
 ]
 
 export default function QuestionsTable() {
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false)
-  const [key, setKey] = useState(0) // Used to force refresh the grid
-
-  const handleQuestionAdded = () => {
-    // Refresh the grid after a question is added
-    setKey((prev) => prev + 1)
-  }
-
+  
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">Questions</h2>
-        <Button onClick={() => setIsAddModalOpen(true)} className="flex items-center gap-2">
-          <Plus className="h-4 w-4" />
-          Add Question
-        </Button>
-      </div>
-
-      <IndiGrid key={key} columns={columns} gridUrl="/api/questions" />
-
-      <AddQuestionModal open={isAddModalOpen} onOpenChange={setIsAddModalOpen} onQuestionAdded={handleQuestionAdded} />
+      <IndiGrid columns={columns} gridUrl="/api/questions" />
     </div>
   )
 }

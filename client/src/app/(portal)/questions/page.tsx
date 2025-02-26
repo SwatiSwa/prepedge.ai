@@ -1,4 +1,6 @@
+import { Button } from '@/components/ui/button'
 import QuestionsTable from './questions-table'
+import Link from 'next/link'
 
 export default async function Questions() {
   return (
@@ -9,6 +11,14 @@ export default async function Questions() {
           <p className='text-muted-foreground'>
             View and manage all questions in the question bank
           </p>
+        </div>
+        <div className='flex space-x-4'>
+          <Button>Add Question</Button>
+          <Button asChild>
+            <Link href='/questions/copilot'>
+            Question Copilot
+            </Link>
+          </Button>
         </div>
       </div>
       <QuestionsTable />
